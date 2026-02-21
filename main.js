@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 // book constructor
 function Book (title, author, pages, read) {
       if (!new.target) {
@@ -11,3 +13,11 @@ function Book (title, author, pages, read) {
     console.log(this.title + this.author + this.pages + this.read);
   };
 };
+
+function addBook() {
+
+}
+
+function displayBook() {
+    
+}
