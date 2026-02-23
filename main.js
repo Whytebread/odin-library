@@ -1,4 +1,25 @@
-const myLibrary = [];
+const myLibrary = [
+    {
+        title = "The Hobbit",
+        author = "J.R.R. Tolkien",
+        pages = 366,
+        read = true
+    },
+
+    {
+        title = "The Great Gatsby",
+        author = "F. Scott Fitzgerald",
+        pages = 180,
+        read = false
+    },
+
+    {
+        title = "The Picture of Dorian Gray",
+        author = "Oscar Wilde",
+        pages = 253,
+        read = true
+    },
+];
 
 // book constructor
 function Book (title, author, pages, read) {
@@ -19,5 +40,5 @@ function addBook() {
 }
 
 function displayBook() {
-    
+
 }
