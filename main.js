@@ -3,26 +3,32 @@ const myLibrary = [
         title = "The Hobbit",
         author = "J.R.R. Tolkien",
         pages = 366,
-        read = true
+        read = true,
+        id = idNumber
     },
 
     {
         title = "The Great Gatsby",
         author = "F. Scott Fitzgerald",
         pages = 180,
-        read = false
+        read = false,
+        id = idNumber
     },
 
     {
         title = "The Picture of Dorian Gray",
         author = "Oscar Wilde",
         pages = 253,
-        read = true
+        read = true,
+        id = idNumber
     },
 ];
 
+// ID number generator
+idNumber= crypto.randomUUID();
+
 // book constructor
-function Book (title, author, pages, read) {
+function Book (title, author, pages, read, id) {
       if (!new.target) {
     throw Error("You must use the 'new' operator to call the constructor");
   }
@@ -30,8 +36,9 @@ function Book (title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+  this.id = id;
   this.info = fuction() {
-    console.log(this.title + this.author + this.pages + this.read);
+    console.log(this.title + this.author + this.pages + this.read + this.id);
   };
 };
 

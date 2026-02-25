@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>My Library</title>
     <link rel="main.css" name="stylesheet">
     <link rel="main.js" name="javascript">
 </head>
+
 <body>
-    
+    <header>
+        <h1>My Library</h1>
+    </header>
+    <main>
+        <div class="library-display">
+            <div class="book-card">
+                <div class="title">
+
+                </div>
+                <div class="author">
+
+                </div>
+                <div class="pages">
+
+                </div>
+
+                <button class="remove-button">Remove Book</button>
+                <button class="read-button">Read</button>
+            </div>
+        </div>
+
+        <button class="add-button">Add Book</button>
+
+        <dialog id="add-book">
+            <form method="dialog">
+                <label>Title:</label>
+                <input type="text" name="title" id="title" required>
+                <label>Author:</label>
+                <input type="text" name="author" id="author" required>
+                <label>Number of Pages:</label>
+                <input type="number" name="page-number" id="page-number" required>
+                <fieldset>
+                    <legend>Have you read this book?</legend>
+                        <label><input type="checkbox" name="yes" value="true">Yes</label>
+                        <label><input type="checkbox" name="no" value="false">No</label>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
+
+    </main>
 </body>
+
 </html>
