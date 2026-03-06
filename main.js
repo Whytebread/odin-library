@@ -22,7 +22,19 @@ const myLibrary = [
         read = true,
         id = idNumber
     },
-];
+]
+
+// containers
+const library = document.getElementsByClassName("library-display");
+
+// Buttons
+const addBook = document.getElementsByClassName("add-button");
+const removeBook = document.getElementsByClassName("remove-button");
+
+// Event listenters
+addBook.addEventListner("click", addBook());
+removeBook.addEventListner("click", removeBook())
+
 
 // ID number generator
 idNumber= crypto.randomUUID();
@@ -47,5 +59,13 @@ function addBook() {
 }
 
 function displayBook() {
+
+}
+
+function removeBook() {
+
+}
+
+function dislplayLibrary() {
 
 }
