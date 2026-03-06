@@ -24,6 +24,11 @@ const myLibrary = [
     },
 ]
 
+// book card elements
+const bookTitle = document.getElementsByClassName("title");
+const bookAuther = document.getElementsByClassName("author");
+const bookPages = document.getElementById("pages");
+
 // containers
 const library = document.getElementsByClassName("library-display");
 
