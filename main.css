@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: lato;
 }
 
 /* HEADING */
+header {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
