@@ -29,8 +29,8 @@ const addBookButton = document.querySelector(".add-button");
 const removeBookButton = document.querySelector(".remove-button");
 
 // Event listenters
-addBookButton.addEventListener("click", addBook);
-removeBookButton.addEventListener("click", removeBook)
+// addBookButton.addEventListener("click", addBook);
+// removeBookButton.addEventListener("click", removeBook)
 
 
 // ID number generator
