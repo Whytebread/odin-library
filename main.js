@@ -28,8 +28,8 @@ const myLibrary = [
 const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
-const addBook = document.getElementsByClassName("add-button");
-const removeBook = document.getElementsByClassName("remove-button");
+const addBookButton = document.getElementsByClassName("add-button");
+const removeBookButton = document.getElementsByClassName("remove-button");
 
 // Event listenters
 addBook.addEventListener("click", addBook());
