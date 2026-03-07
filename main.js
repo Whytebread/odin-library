@@ -1,36 +1,31 @@
 const myLibrary = [
     {
-        title = "The Hobbit",
-        author = "J.R.R. Tolkien",
-        pages = 366,
-        read = true,
-        id = idNumber
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: 366,
+        read: true,
+        id:idNumber
     },
 
     {
-        title = "The Great Gatsby",
-        author = "F. Scott Fitzgerald",
-        pages = 180,
-        read = false,
-        id = idNumber
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: 180,
+        read: false,
+        id:idNumber
     },
 
     {
-        title = "The Picture of Dorian Gray",
-        author = "Oscar Wilde",
-        pages = 253,
-        read = true,
-        id = idNumber
+        title: "The Picture of Dorian Gray",
+        author: "Oscar Wilde",
+        pages: 253,
+        read: true,
+        id:idNumber
     },
-]
-
-// book card elements
-const bookTitle = document.getElementsByClassName("title");
-const bookAuther = document.getElementsByClassName("author");
-const bookPages = document.getElementById("pages");
+];
 
 // containers
-const library = document.getElementsByClassName("library-display");
+const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
 const addBook = document.getElementsByClassName("add-button");
@@ -54,7 +49,7 @@ function Book(title, author, pages, read, id) {
     this.pages = pages;
     this.read = read;
     this.id = id;
-    this.info = fuction() {
+    this.info = function() {
         console.log(this.title + this.author + this.pages + this.read + this.id);
     };
 };
@@ -74,7 +69,7 @@ function removeBook() {
 function dislplayLibrary() {
     myLibrary.forEach(item => {
         const bookCard = document.createElement("div");
-        bookCard.textContent = "";
+        bookCard.className = "book-card";
         bookCard.innerHTML =
                             `
                             <div class='title'>${item.title}</div >
@@ -82,11 +77,11 @@ function dislplayLibrary() {
                             <div class='pages'>${item.pages}</div>
                             <button class='remove-button'>Remove Book</button>
                             <button class='read-button'>
-                                ${book.read ? "Read" : "Not read yet"}
+                                ${item.read ? "Read" : "Not read yet"}
                             </button>
                             `;
-        library.appendchild("div");
-    })
-}
+        libraryContainer.appendchild(bookCard);
+    });
+};
 
 dislplayLibrary();
