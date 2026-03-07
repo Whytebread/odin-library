@@ -4,7 +4,6 @@ const myLibrary = [
         author: "J.R.R. Tolkien",
         pages: 366,
         read: true,
-        id:idNumber
     },
 
     {
@@ -12,7 +11,6 @@ const myLibrary = [
         author: "F. Scott Fitzgerald",
         pages: 180,
         read: false,
-        id:idNumber
     },
 
     {
@@ -20,7 +18,6 @@ const myLibrary = [
         author: "Oscar Wilde",
         pages: 253,
         read: true,
-        id:idNumber
     },
 ];
 
@@ -28,12 +25,12 @@ const myLibrary = [
 const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
-const addBookButton = document.getElementsByClassName("add-button");
-const removeBookButton = document.getElementsByClassName("remove-button");
+const addBookButton = document.querySelector(".add-button");
+const removeBookButton = document.querySelector(".remove-button");
 
 // Event listenters
-addBook.addEventListener("click", addBook());
-removeBook.addEventListener("click", removeBook())
+addBookButton.addEventListener("click", addBook);
+removeBookButton.addEventListener("click", removeBook)
 
 
 // ID number generator
