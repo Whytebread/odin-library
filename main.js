@@ -32,8 +32,8 @@ const addBook = document.getElementsByClassName("add-button");
 const removeBook = document.getElementsByClassName("remove-button");
 
 // Event listenters
-addBook.addEventListner("click", addBook());
-removeBook.addEventListner("click", removeBook())
+addBook.addEventListener("click", addBook());
+removeBook.addEventListener("click", removeBook())
 
 
 // ID number generator
@@ -66,7 +66,8 @@ function removeBook() {
 
 }
 
-function dislplayLibrary() {
+function displayLibrary() {
+    libraryContainer.innerHTML = ""
     myLibrary.forEach(item => {
         const bookCard = document.createElement("div");
         bookCard.className = "book-card";
@@ -80,8 +81,8 @@ function dislplayLibrary() {
                                 ${item.read ? "Read" : "Not read yet"}
                             </button>
                             `;
-        libraryContainer.appendchild(bookCard);
+        libraryContainer.appendChild(bookCard);
     });
 };
 
-dislplayLibrary();
+displayLibrary();
