@@ -42,21 +42,21 @@ removeBook.addEventListner("click", removeBook())
 
 
 // ID number generator
-idNumber= crypto.randomUUID();
+idNumber = crypto.randomUUID();
 
 // book constructor
-function Book (title, author, pages, read, id) {
-      if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
-  }
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.id = id;
-  this.info = fuction() {
-    console.log(this.title + this.author + this.pages + this.read + this.id);
-  };
+function Book(title, author, pages, read, id) {
+    if (!new.target) {
+        throw Error("You must use the 'new' operator to call the constructor");
+    }
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.id = id;
+    this.info = fuction() {
+        console.log(this.title + this.author + this.pages + this.read + this.id);
+    };
 };
 
 function addBook() {
@@ -72,5 +72,19 @@ function removeBook() {
 }
 
 function dislplayLibrary() {
-
+    myLibrary.forEach(item => {
+        const bookCard = document.createElement("div");
+        bookCard.textContent = "";
+        bookCard.innerHTML =
+                            `
+                            <div class='title'>${item.title}</div >
+                            <div class='author'>${item.author}</div>
+                            <div class='pages'>${item.pages}</div>
+                            <button class='remove-button'>Remove Book</button>
+                            <button class='read-button'>
+                                ${book.read ? "Read" : "Not read yet"}
+                            </button>
+                            `;
+        library.appendchild("div");
+    })
 }
