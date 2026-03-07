@@ -88,3 +88,5 @@ function dislplayLibrary() {
         library.appendchild("div");
     })
 }
+
+dislplayLibrary();
