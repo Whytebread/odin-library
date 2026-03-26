@@ -21,16 +21,20 @@ const myLibrary = [
     },
 ];
 
+const dialog = document.querySelector(".add-book");
+
 // containers
 const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
 const addBookButton = document.querySelector(".add-button");
 const removeBookButton = document.querySelector(".remove-button");
+const submitBookButton = document.querySelector(".submit-button")
 
 // Event listenters
-// addBookButton.addEventListener("click", addBook);
-// removeBookButton.addEventListener("click", removeBook)
+addBookButton.addEventListener("click", addBook);
+removeBookButton.addEventListener("click", removeBook)
+// submitBookButton.addEventListener("click", )
 
 
 // ID number generator
@@ -52,16 +56,10 @@ function Book(title, author, pages, read, id) {
 };
 
 function addBook() {
+    dialog.showModal();
 
 }
 
-function displayBook() {
-
-}
-
-function removeBook() {
-
-}
 
 function displayLibrary() {
     libraryContainer.innerHTML = ""

@@ -15,3 +15,15 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+/* LIBRARY SECTION */
+.library-display {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-card {
+
+}
