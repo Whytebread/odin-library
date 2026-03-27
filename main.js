@@ -1,4 +1,4 @@
-const myLibrary = [
+let myLibrary = [
     {
         title: "The Hobbit",
         author: "J.R.R. Tolkien",
