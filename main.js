@@ -4,6 +4,7 @@ const myLibrary = [
         author: "J.R.R. Tolkien",
         pages: 366,
         read: true,
+        id: crypto.randomUUID(),
     },
 
     {
@@ -11,6 +12,7 @@ const myLibrary = [
         author: "F. Scott Fitzgerald",
         pages: 180,
         read: false,
+        id: crypto.randomUUID(),
     },
 
     {
@@ -18,6 +20,7 @@ const myLibrary = [
         author: "Oscar Wilde",
         pages: 253,
         read: true,
+        id: crypto.randomUUID(),
     },
 ];
 
@@ -28,17 +31,10 @@ const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
 const addBookButton = document.querySelector(".add-button");
-const removeBookButton = document.querySelector(".remove-button");
 const submitBookButton = document.querySelector(".submit-button")
 
 // Event listenters
 addBookButton.addEventListener("click", addBook);
-removeBookButton.addEventListener("click", removeBook)
-// submitBookButton.addEventListener("click", )
-
-
-// ID number generator
-idNumber = crypto.randomUUID();
 
 // book constructor
 function Book(title, author, pages, read, id) {
@@ -50,7 +46,7 @@ function Book(title, author, pages, read, id) {
     this.pages = pages;
     this.read = read;
     this.id = id;
-    this.info = function() {
+    this.info = function () {
         console.log(this.title + this.author + this.pages + this.read + this.id);
     };
 };
@@ -60,14 +56,22 @@ function addBook() {
 
 }
 
+function removeBookById(id) {
+    myLibrary = myLibrary.filter(book => book.id !== id);
+    
+    displayLibrary();
+}
+
 
 function displayLibrary() {
     libraryContainer.innerHTML = ""
     myLibrary.forEach(item => {
         const bookCard = document.createElement("div");
         bookCard.className = "book-card";
+        bookCard.dataset.id = item.id;
+
         bookCard.innerHTML =
-                            `
+            `
                             <div class='title'>${item.title}</div >
                             <div class='author'>${item.author}</div>
                             <div class='pages'>${item.pages}</div>
@@ -76,6 +80,11 @@ function displayLibrary() {
                                 ${item.read ? "Read" : "Not read yet"}
                             </button>
                             `;
+                            
+        const removeBookButton = bookCard.querySelector(".remove-button");
+        removeBookButton.addEventListener("click", () => {
+            removeBookById(bookCard.dataset.id);
+        });
         libraryContainer.appendChild(bookCard);
     });
 };
