@@ -45,7 +45,7 @@ function Book(title, author, pages, read, id) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.id = id;
+    id = crypto.randomUUID();
     this.info = function () {
         console.log(this.title + this.author + this.pages + this.read + this.id);
     };
