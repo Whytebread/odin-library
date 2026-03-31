@@ -67,6 +67,20 @@ function removeBookById(id) {
     displayLibrary();
 }
 
+form.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    title = titleInput.value;
+    author = authorInput.value;
+    pages = pageInput.value;
+
+    let newBook = new Book(title, author, pages, read, crypto.randomUUID);
+
+    myLibrary.push(newBook);
+
+    displayLibrary();
+})
+
 
 function displayLibrary() {
     libraryContainer.innerHTML = ""
