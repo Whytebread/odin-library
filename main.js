@@ -79,7 +79,7 @@ form.addEventListener("click", (e) => {
     let newBook = new Book(title, author, pages, read, crypto.randomUUID);
 
     myLibrary.push(newBook);
-
+    dialog.close();
     displayLibrary();
 })
 
