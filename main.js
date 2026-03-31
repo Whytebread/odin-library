@@ -51,14 +51,14 @@ function Book(title, author, pages, read, id) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    id = crypto.randomUUID();
+    this.id = id;
     this.info = function () {
         console.log(this.title + this.author + this.pages + this.read + this.id);
     };
 };
 
 function addBook() {
-    form.reset;
+    form.reset();
     dialog.showModal();
 }
 
@@ -76,7 +76,7 @@ form.addEventListener("submit", (e) => {
     pages = pageInput.value;
     read = checkBox.checked;
 
-    let newBook = new Book(title, author, pages, read, crypto.randomUUID);
+    let newBook = new Book(title, author, pages, read, crypto.randomUUID());
 
     myLibrary.push(newBook);
     dialog.close();
@@ -103,9 +103,11 @@ function displayLibrary() {
                             `;
                             
         const removeBookButton = bookCard.querySelector(".remove-button");
+
         removeBookButton.addEventListener("click", () => {
             removeBookById(bookCard.dataset.id);
         });
+
         libraryContainer.appendChild(bookCard);
     });
 };
