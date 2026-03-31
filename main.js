@@ -25,6 +25,11 @@ let myLibrary = [
 ];
 
 const dialog = document.querySelector(".add-book");
+const form = dialog.querySelector("form");
+
+const titleInput = document.querySelector("#title");
+const authorInput = document.querySelector("#author");
+const pageInput = document.querySelector("#page-number");
 
 // containers
 const libraryContainer = document.querySelector(".library-display");
@@ -52,8 +57,8 @@ function Book(title, author, pages, read, id) {
 };
 
 function addBook() {
+    form.reset;
     dialog.showModal();
-
 }
 
 function removeBookById(id) {
