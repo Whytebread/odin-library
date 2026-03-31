@@ -37,10 +37,12 @@ const libraryContainer = document.querySelector(".library-display");
 
 // Buttons
 const addBookButton = document.querySelector(".add-button");
-const submitBookButton = document.querySelector(".submit-button")
+const submitBookButton = document.querySelector(".submit-button");
+const closeButton = document.querySelector(".close-button");
 
 // Event listenters
 addBookButton.addEventListener("click", addBook);
+closeButton.addEventListener("click", closeForm)
 
 // book constructor
 function Book(title, author, pages, read, id) {
@@ -66,6 +68,10 @@ function removeBookById(id) {
     myLibrary = myLibrary.filter(book => book.id !== id);
     
     displayLibrary();
+}
+
+function closeForm() {
+    dialog.close();
 }
 
 form.addEventListener("submit", (e) => {
