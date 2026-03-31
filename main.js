@@ -68,7 +68,7 @@ function removeBookById(id) {
     displayLibrary();
 }
 
-form.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     title = titleInput.value;
