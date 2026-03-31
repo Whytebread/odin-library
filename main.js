@@ -30,6 +30,7 @@ const form = dialog.querySelector("form");
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pageInput = document.querySelector("#page-number");
+const checkBox = document.querySelector("#check-box");
 
 // containers
 const libraryContainer = document.querySelector(".library-display");
@@ -73,6 +74,7 @@ form.addEventListener("click", (e) => {
     title = titleInput.value;
     author = authorInput.value;
     pages = pageInput.value;
+    read = checkBox.checked;
 
     let newBook = new Book(title, author, pages, read, crypto.randomUUID);
 
