@@ -30,3 +30,15 @@ header {
     height: 200px;
     background-color: cornsilk;
 }
+
+/* BUTTONS */
+.add-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.add-button {
+    padding: 20px;
+    border-radius: 20px;
+}
