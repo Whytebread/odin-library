@@ -24,6 +24,7 @@ header {
 .library-display {
     padding-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -41,7 +42,8 @@ header {
 }
 
 .text-wrapper {
-    padding: 10px;
+    padding: 20px;
+    text-wrap: balance;
 }
 
 .button-wrapper {
@@ -50,6 +52,18 @@ header {
     align-items:last baseline;
     justify-content: center;
     gap: 15px;
+}
+
+.title {
+    padding: 5px;
+}
+
+.author {
+    padding: 5px;
+}
+
+.pages {
+    padding: 5px;
 }
 
 /* BUTTONS */
@@ -61,10 +75,21 @@ header {
 
 .add-button {
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 35px;
     font-size: 18px;
     font-weight: bold;
     background-color:bisque;
     border-width: 5px;
     cursor: pointer;
+} 
+
+.read-button {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.remove-button {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(214, 44, 44)
 }

@@ -99,14 +99,14 @@ function displayLibrary() {
 
         bookCard.innerHTML =
             `               <div class='text-wrapper'>
-                                <div class='title'>${item.title}</div >
-                                <div class='author'>${item.author}</div>
-                                <div class='pages'>${item.pages}</div>
+                                <div class='title'>Title: <u>${item.title}</u></div >
+                                <div class='author'>Author: ${item.author}</div>
+                                <div class='pages'>Pages: ${item.pages}</div>
                             </div>
                             <div class='button-wrapper'>
                                 <button class='remove-button'>Remove Book</button>
                                 <button class='read-button'>
-                                    ${item.read ? "Read" : "Not read yet"}
+                                    ${item.read ? "✅ Read" : "📖 Not Read"}
                                 </button>
                             </div>
                             `;
