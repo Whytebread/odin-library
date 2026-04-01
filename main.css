@@ -5,6 +5,10 @@
     font-family: lato;
 }
 
+body {
+    background-color: #7c93c9;
+}
+
 /* HEADING */
 header {
     text-align: center;
@@ -29,6 +33,7 @@ header {
     width: 300px;
     height: 200px;
     background-color: cornsilk;
+    border-radius: 20px;
 }
 
 /* BUTTONS */
@@ -41,4 +46,8 @@ header {
 .add-button {
     padding: 20px;
     border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color:bisque;
+    border-width: 5px;
 }
