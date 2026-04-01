@@ -98,14 +98,17 @@ function displayLibrary() {
         bookCard.dataset.id = item.id;
 
         bookCard.innerHTML =
-            `
-                            <div class='title'>${item.title}</div >
-                            <div class='author'>${item.author}</div>
-                            <div class='pages'>${item.pages}</div>
-                            <button class='remove-button'>Remove Book</button>
-                            <button class='read-button'>
-                                ${item.read ? "Read" : "Not read yet"}
-                            </button>
+            `               <div class='text-wrapper'>
+                                <div class='title'>${item.title}</div >
+                                <div class='author'>${item.author}</div>
+                                <div class='pages'>${item.pages}</div>
+                            </div>
+                            <div class='button-wrapper'>
+                                <button class='remove-button'>Remove Book</button>
+                                <button class='read-button'>
+                                    ${item.read ? "Read" : "Not read yet"}
+                                </button>
+                            </div>
                             `;
                             
         const removeBookButton = bookCard.querySelector(".remove-button");

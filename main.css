@@ -29,11 +29,27 @@ header {
     justify-content: center;
 }
 
+/* BOOK CARDS */
 .book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 300px;
     height: 200px;
     background-color: cornsilk;
     border-radius: 20px;
+}
+
+.text-wrapper {
+    padding: 10px;
+}
+
+.button-wrapper {
+    padding: 10px;
+    display: flex;
+    align-items:last baseline;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* BUTTONS */
@@ -50,4 +66,5 @@ header {
     font-weight: bold;
     background-color:bisque;
     border-width: 5px;
+    cursor: pointer;
 }
